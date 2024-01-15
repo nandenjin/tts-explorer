@@ -18,9 +18,9 @@ jobs:
       - name: Run build
         run: BASE_URL="openai-tts-explorer" npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: dist/
   push-gh-pages:
     needs: build
     if: github.ref == 'refs/heads/dev'
